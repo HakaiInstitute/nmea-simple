@@ -3,6 +3,7 @@
 var APB = require('./codecs/APB.js');
 var BWC = require('./codecs/BWC.js');
 var DBT = require('./codecs/DBT.js');
+var DPT = require('./codecs/DPT.js');
 var GGA = require('./codecs/GGA.js');
 var GLL = require('./codecs/GLL.js');
 var GSA = require('./codecs/GSA.js');
@@ -11,6 +12,7 @@ var HDG = require('./codecs/HDG.js');
 var HDM = require('./codecs/HDM.js');
 var HDT = require('./codecs/HDT.js');
 var MTK = require('./codecs/MTK.js');
+var MTW = require('./codecs/MTW.js');
 var MWV = require('./codecs/MWV.js');
 var RDID = require('./codecs/RDID.js');
 var RMC = require('./codecs/RMC.js');
@@ -39,6 +41,7 @@ exports.traditionalDecoders = {
     APB: APB.decode,
     BWC: BWC.decode,
     DBT: DBT.decode,
+    DPT: DPT.decode,
     GGA: GGA.decode,
     GLL: GLL.decode,
     GSA: GSA.decode,
@@ -47,6 +50,7 @@ exports.traditionalDecoders = {
     HDM: HDM.decode,
     HDT: HDT.decode,
     MTK: MTK.decode,
+    MTW: MTW.decode,
     MWV: MWV.decode,
     RDID: RDID.decode,
     RMC: RMC.decode,
