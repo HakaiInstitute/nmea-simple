@@ -16,7 +16,7 @@ var helpers = require("../helpers.js")
  */
 
 exports.TYPE = 'depth-transducer';
-exports.ID = 'DPT';
+exports.ID = 'MTW';
 
 exports.decode = function(fields) {
   return {
