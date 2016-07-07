@@ -92,21 +92,33 @@ exports.parse = function (line) {
             val.talker_id = talker_id;
             return val;
         } else {
-            throw Error("Error in parsing: " + line);
+            //throw Error("Error in parsing: " + line);
+            var val = {};
+            val.error = true;
+            return val;
         }
     } else {
-        throw Error("Invalid line: " + line);
+        //throw Error("Invalid line: " + line);
+        var val = {};
+        val.error = true;
+        return val;
     }
 };
 
 exports.encode = function (talker, msg) {
     if (typeof msg === 'undefined') {
-        throw new Error("Can not encode undefined, did you forget msg parameter?");
+        //throw new Error("Can not encode undefined, did you forget msg parameter?");
+        var val = {};
+        val.error = true;
+        return val;
     }
     encoder = exports.encoders[msg.type];
     if (encoder) {
         return encoder.encode(talker, msg);
     } else {
-        throw Error("No encoder for type: " + msg.type);
+        //throw Error("No encoder for type: " + msg.type);
+        var val = {};
+        val.error = true;
+        return val;
     }
 }
